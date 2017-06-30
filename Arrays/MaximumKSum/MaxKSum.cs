@@ -11,25 +11,26 @@ namespace MaximumKSum
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            int k = int.Parse(Console.ReadLine());
+            int numberOfBiggestElements  = int.Parse(Console.ReadLine());
             int[] array = new int[n];
             ReadArray(array);
-            Console.WriteLine(GetSumOfKElements(array, k)); 
+            Console.WriteLine(SumOfArrayElements(array, numberOfBiggestElements));
+            
         }
 
-        private static int GetSumOfKElements(int[] array, int k)
+        private static int SumOfArrayElements(int[] array, int numberOfBiggestElements)
         {
             int bestSum = 0;
 
-            int[] sorted = array.OrderBy(x => x).ToArray();
-            for (int i = 0; i < k; i++)
+            Array.Sort(array);
+            Array.Reverse(array);
+            for (int i = 0; i < numberOfBiggestElements; i++)
             {
                 bestSum += array[i];
             }
 
             return bestSum;
         }
-
         private static void ReadArray(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
