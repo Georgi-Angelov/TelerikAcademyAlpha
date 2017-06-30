@@ -7,29 +7,29 @@ namespace Compare_Arrays
         static void Main(string[] args)
         {
 
-            var s1 = Console.ReadLine();
-            var s2 = Console.ReadLine();
+            var firstString = Console.ReadLine();
+            var secondString = Console.ReadLine();
 
-            for (int i = 0; i < Math.Min(s1.Length, s2.Length); i++)
+            for (int i = 0; i < Math.Min(firstString.Length, secondString.Length); i++)
             {
-                if (s1[i] < s2[i])
+                if (firstString[i] < secondString[i])
                 {
-                    Console.WriteLine("<", s1, s2);
+                    Console.WriteLine("<", firstString, secondString);
                     return;
                 }
-                if (s1[i] > s2[i])
+                if (firstString[i] > secondString[i])
                 {
-                    Console.WriteLine(">", s1, s2);
+                    Console.WriteLine(">", firstString, secondString);
                     return;
                 }
             }
-            if (s1.Length == s2.Length)
+            if (firstString.Length == secondString.Length)
             {
                 Console.WriteLine("=");
             }
             else
             {
-                Console.WriteLine(s1.Length < s2.Length ? "<" : ">");
+                Console.WriteLine(firstString.Length < secondString.Length ? "<" : ">");
             }
         }
     }
