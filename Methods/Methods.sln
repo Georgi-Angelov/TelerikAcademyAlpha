@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingArray", "SortingArra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFactorial", "NFactorial\NFactorial.csproj", "{B90391F9-969C-485C-921B-485703066E6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingPolynomials", "AddingPolynomials\AddingPolynomials.csproj", "{EC3D9D57-EBCA-4423-9E36-7C2A46E15845}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegerCalcs", "IntegerCalcs\IntegerCalcs.csproj", "{8EB83D30-8909-4B7B-B0ED-68B22FFCE46C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{B90391F9-969C-485C-921B-485703066E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B90391F9-969C-485C-921B-485703066E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B90391F9-969C-485C-921B-485703066E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3D9D57-EBCA-4423-9E36-7C2A46E15845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3D9D57-EBCA-4423-9E36-7C2A46E15845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3D9D57-EBCA-4423-9E36-7C2A46E15845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3D9D57-EBCA-4423-9E36-7C2A46E15845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB83D30-8909-4B7B-B0ED-68B22FFCE46C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB83D30-8909-4B7B-B0ED-68B22FFCE46C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB83D30-8909-4B7B-B0ED-68B22FFCE46C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB83D30-8909-4B7B-B0ED-68B22FFCE46C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

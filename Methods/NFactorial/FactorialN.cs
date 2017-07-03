@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace NFactorial
 {
-    class Program
+    class FactorialN
     {
         static void Main(string[] args)
         {
