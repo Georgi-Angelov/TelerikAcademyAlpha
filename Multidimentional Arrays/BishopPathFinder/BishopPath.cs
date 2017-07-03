@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BishopPathFinder
 {
-    class Program
+    class BishopPath
     {
         static void Main(string[] args)
         {
