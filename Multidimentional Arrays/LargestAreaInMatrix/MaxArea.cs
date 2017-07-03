@@ -2,7 +2,7 @@
 
 namespace _07_Largest_area_in_matrix
 {
-    class Program
+    class MaxArea
     {
         private static int max = 0; 
         private static int[,] matrix;   
