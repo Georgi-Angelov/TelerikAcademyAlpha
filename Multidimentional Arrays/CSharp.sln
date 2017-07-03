@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequence in a Matrix", "Seq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fill Matrix", "Fill Matrix\Fill Matrix.csproj", "{2244FE55-39A4-4AD0-9B00-2F71AA6F82E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BishopPathFinder", "BishopPathFinder\BishopPathFinder.csproj", "{D36D461A-7DBB-4ADA-8E08-9A6609F898C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2244FE55-39A4-4AD0-9B00-2F71AA6F82E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2244FE55-39A4-4AD0-9B00-2F71AA6F82E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2244FE55-39A4-4AD0-9B00-2F71AA6F82E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D36D461A-7DBB-4ADA-8E08-9A6609F898C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D36D461A-7DBB-4ADA-8E08-9A6609F898C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D36D461A-7DBB-4ADA-8E08-9A6609F898C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D36D461A-7DBB-4ADA-8E08-9A6609F898C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

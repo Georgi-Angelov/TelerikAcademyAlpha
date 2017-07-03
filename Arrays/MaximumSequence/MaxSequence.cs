@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace MaximumSequence
 {
@@ -10,17 +7,19 @@ namespace MaximumSequence
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            int[] array = new int[n];
+            int arraySize = int.Parse(Console.ReadLine());
+            int[] array = new int[arraySize];
+
+            ReadArray(array);
             
-            
-            for (int i = 0; i < n; i++)
-            {
-                array[i] = int.Parse(Console.ReadLine());
-            }
+            Console.WriteLine(BiggestSequence(array, arraySize));
+        }
+
+        private static int BiggestSequence(int[] array, int arraySize)
+        {
             int count = 1;
             int maxCount = 0;
-            for (int i = 0; i < n - 1; i++)
+            for (int i = 0; i < arraySize - 1; i++)
             {
                 if (array[i] == array[i + 1])
                 {
@@ -36,7 +35,16 @@ namespace MaximumSequence
                 }
 
             }
-            Console.WriteLine(maxCount);
+            return maxCount;
         }
+
+        private static void ReadArray(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+        }
+        
     }
 }
