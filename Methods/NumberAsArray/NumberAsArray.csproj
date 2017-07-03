@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{92DE7B8E-1475-44E6-AEC6-980431370D7A}</ProjectGuid>
+    <ProjectGuid>{43C0C6F2-9D79-4505-BFD9-38B3C5EA6502}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ReverseNumber</RootNamespace>
-    <AssemblyName>ReverseNumber</AssemblyName>
+    <RootNamespace>NumberAsArray</RootNamespace>
+    <AssemblyName>NumberAsArray</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReverseDecimal.cs" />
+    <Compile Include="NumAsArray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
