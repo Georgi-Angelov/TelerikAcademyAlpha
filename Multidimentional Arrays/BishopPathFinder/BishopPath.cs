@@ -133,6 +133,6 @@ namespace BishopPathFinder
                 Console.WriteLine();
             }
         }
-
+        
     }
 }
