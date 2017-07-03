@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{12802F41-75E1-4055-8DBC-10B3CCFA8666}</ProjectGuid>
+    <ProjectGuid>{FD921C89-CBB4-49B8-988E-F2F169266828}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>GetLargestNumber</RootNamespace>
-    <AssemblyName>GetLargestNumber</AssemblyName>
+    <RootNamespace>EnglishDigit</RootNamespace>
+    <AssemblyName>EnglishDigit</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LargestOf3.cs" />
+    <Compile Include="LastDigitName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
