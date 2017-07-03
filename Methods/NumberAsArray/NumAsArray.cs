@@ -7,20 +7,26 @@ namespace NumberAsArray
     {
         static void Main(string[] args)
         {
-            var arraySizes = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            var firstArray = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            var secondArray = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var arraySizes = Console.ReadLine().Split(' ')
+                                               .Select(int.Parse)
+                                               .ToArray();
+            var firstArray = Console.ReadLine().Split(' ')
+                                               .Select(int.Parse)
+                                               .ToArray();
+            var secondArray = Console.ReadLine().Split(' ')
+                                                .Select(int.Parse)
+                                                .ToArray();
             int firstArraySize = arraySizes[0];
             int secondArraySize = arraySizes[1];
-            int remainder = 0;
-            int[] result = SumNumArrays(firstArray, secondArray, firstArraySize, secondArraySize, ref remainder);
+            
+            int[] result = SumNumArrays(firstArray, secondArray, firstArraySize, secondArraySize);
             Console.WriteLine(string.Join(" ", result));
         }
 
-        private static int[] SumNumArrays(int[] firstArray, int[] secondArray, int firstArraySize, int secondArraySize, ref int remainder)
+        private static int[] SumNumArrays(int[] firstArray, int[] secondArray, int firstArraySize, int secondArraySize)
         {
             var result = new int[Math.Max(firstArraySize, secondArraySize)];
-
+            int remainder = 0;
             for (int i = 0; i < Math.Min(firstArraySize, secondArraySize); i++)
             {
                 result[i] = (firstArray[i] + secondArray[i] + remainder) % 10;
