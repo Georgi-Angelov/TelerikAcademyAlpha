@@ -7,12 +7,10 @@ namespace _15.Replace_Tags
     {
         static void Main(string[] args)
         {
-            // TODO Improve RegexExpression 80/100 in BGCoder
+            // TODO Improve RegexExpression 80/100 in BGCoder or Whole Solution
             string input = Console.ReadLine();
-            
-            Regex r = new Regex(@"(<\s*a\s*href\s*=)\s*""(.*?)""\s*>(.*?)<\s*/\s*a\s*>");
-            string result = r.Replace(input, m => "[" + m.Groups[3] + "](" + m.Groups[2] + ")");
-
+            Regex r = new Regex(@"<a href=""(.*?)"">(.*?)</a>");
+            string result = r.Replace(input, m => "[" + m.Groups[2] + "](" + m.Groups[1] + ")");
             Console.WriteLine(result);
         }
     }

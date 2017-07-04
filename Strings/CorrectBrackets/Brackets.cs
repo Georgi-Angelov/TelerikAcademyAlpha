@@ -7,6 +7,12 @@ namespace CorrectBrackets
         static void Main(string[] args)
         {
             string expression = Console.ReadLine();
+            string result = BracketsEvaluation(expression);
+            Console.WriteLine(result);
+        }
+
+        private static string BracketsEvaluation(string expression)
+        {
             int closingBracket = 0;
             int openingBracket = 0;
             for (int i = 0; i < expression.Length; i++)
@@ -20,7 +26,8 @@ namespace CorrectBrackets
                     closingBracket++;
                 }
             }
-            Console.WriteLine(openingBracket == closingBracket ? "Correct" : "Incorrect");
+            string result = openingBracket == closingBracket ? "Correct" : "Incorrect";
+            return result;
         }
     }
 }

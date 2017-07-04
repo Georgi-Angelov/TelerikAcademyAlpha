@@ -7,7 +7,7 @@ namespace ReverseString
     {
         static void Main(string[] args)
         {
-            var inputString = Console.ReadLine().ToCharArray().Reverse().ToArray();
+            char[] inputString = Console.ReadLine().Reverse().ToArray();
             Console.WriteLine(inputString);
         }
     }

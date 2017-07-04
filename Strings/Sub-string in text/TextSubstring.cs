@@ -11,7 +11,6 @@ namespace Sub_string_in_text
             int numberOfOccurrences = FindOccurrences(pattern, textToCheck);
             Console.WriteLine(numberOfOccurrences);
         }
-
         private static int FindOccurrences(string pattern, string textToCheck)
         {
             int startIndex = 0;
