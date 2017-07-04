@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{93F292F2-25A9-4FBD-BB52-B4EA8CACE2DD}</ProjectGuid>
+    <ProjectGuid>{22EAF80B-568D-4BE2-BCBF-B22BB1AFE3D0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ReverseString</RootNamespace>
-    <AssemblyName>ReverseString</AssemblyName>
+    <RootNamespace>ParseTags</RootNamespace>
+    <AssemblyName>ParseTags</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReverseString.cs" />
+    <Compile Include="ParseTags.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{93F292F2-25A9-4FBD-BB52-B4EA8CACE2DD}</ProjectGuid>
+    <ProjectGuid>{BE290082-AA3F-4D09-96BD-3302DB8E303A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ReverseString</RootNamespace>
-    <AssemblyName>ReverseString</AssemblyName>
+    <RootNamespace>ReplaceTags</RootNamespace>
+    <AssemblyName>ReplaceTags</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReverseString.cs" />
+    <Compile Include="TagReplace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

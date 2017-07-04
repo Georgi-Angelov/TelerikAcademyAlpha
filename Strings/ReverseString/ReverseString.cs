@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace ReverseString
 {
-    class Program
+    class ReverseString
     {
         static void Main(string[] args)
         {

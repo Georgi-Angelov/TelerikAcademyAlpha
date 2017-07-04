@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BishopPathFinder
 {
@@ -22,10 +19,10 @@ namespace BishopPathFinder
             }
             
             int[,] filledBoard = FillChessboard(dimentions);
-            int sum = ExecuteCommands(filledBoard,commands);
-            Console.WriteLine(sum);
-
+            int sumOfVisited = ExecuteCommands(filledBoard,commands);
             //PrintIntBoard(filledBoard);
+            Console.WriteLine(sumOfVisited);
+
 
         }
 
@@ -41,8 +38,8 @@ namespace BishopPathFinder
             {
                 var tokens = command.Split(' ');
                 string direction = tokens[0];
-                int movement = int.Parse(tokens[1]);
-                for (int i = 0; i < movement - 1; i++)
+                int numberOfMoves = int.Parse(tokens[1]);
+                for (int i = 0; i < numberOfMoves - 1; i++)
                 {
                     visited[currentRow, currentCol] = true;
                     switch (direction)
@@ -82,8 +79,7 @@ namespace BishopPathFinder
                     }
                 }
             }
-
-            //PrintBoard(visited);
+            //PrintBoolBoard(visited);
             return totalSum;
         }
 
@@ -111,7 +107,7 @@ namespace BishopPathFinder
             
             return board;
         }
-        private static void PrintBoard(bool[,] filledBoard)
+        private static void PrintBoolBoard(bool[,] filledBoard)
         {
             for (int i = 0; i < filledBoard.GetLength(0); i++)
             {
