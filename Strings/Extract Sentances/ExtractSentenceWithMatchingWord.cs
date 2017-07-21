@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 
 namespace Extract_Sentances
 {
@@ -28,10 +26,7 @@ namespace Extract_Sentances
             string text = Console.ReadLine();
             StringBuilder result = PerformExtraction(word, text);
             Console.WriteLine(result.ToString().Trim());
-
-
         }
-
         private static StringBuilder PerformExtraction(string word, string text)
         {
             StringBuilder result = new StringBuilder();
