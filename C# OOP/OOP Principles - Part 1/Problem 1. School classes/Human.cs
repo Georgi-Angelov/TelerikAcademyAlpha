@@ -8,18 +8,11 @@ namespace Problem_1.School_classes
 {
     public abstract class Human
     {
-        private string name;
-        
-        public Human(string Name)
+        protected Human(string Name)
         {
-            this.name = Name;
+            this.Name = Name;
         }
 
-        public string Name
-        {
-            get { return this.name; }
-            set { this.name = value; }
-        }
-
+        public string Name { get; set; }
     }
 }

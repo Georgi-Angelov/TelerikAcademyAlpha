@@ -11,9 +11,10 @@ namespace Problem_1.School_classes
         private string classID;
         private List<Student> students;
         private List<Teacher> teachers;
+       
         //TODO: Fix naming 
-    
-        public Classes (string classID)
+
+        protected Classes (string classID)
         {
             this.classID = classID;
         }

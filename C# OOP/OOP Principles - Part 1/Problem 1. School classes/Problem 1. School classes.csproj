@@ -46,7 +46,7 @@
     <Compile Include="Disciplines.cs" />
     <Compile Include="IComment.cs" />
     <Compile Include="Human.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Teacher.cs" />

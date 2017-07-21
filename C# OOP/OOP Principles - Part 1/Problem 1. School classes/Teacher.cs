@@ -8,8 +8,8 @@ namespace Problem_1.School_classes
 {
     public class Teacher : Human, IComment
     {
-        private List<Discipline> disciplines;
-        public Teacher(string Name, Discipline enteredDiscipline) : base(Name)
+        private readonly List<Discipline> disciplines;
+        public Teacher(string name, Discipline enteredDiscipline) : base(name)
         {
             disciplines = new List<Discipline>();
             disciplines.Add(enteredDiscipline);

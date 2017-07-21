@@ -8,36 +8,14 @@ namespace Problem_1.School_classes
 {
     public class Student : Human, IComment
     {
-        private string studentName;
-        private int studentID;
-
         public Student(string Name, int studentID) : base(Name)
         {
-            this.studentID = studentID;
+            this.StudentClassNumber = studentID;
         }
 
-        public string StudentName
-        {
-            get
-            {
-                return studentName;
-            }
-            set
-            {
-                this.studentName = value;
-            }
-        }
-        public int StudentClassNumber
-        {
-            get
-            {
-                return studentID;
-            }
-            set
-            {
-                this.studentID = value;
-            }
-        }
+        public string StudentName { get; set; }
+
+        public int StudentClassNumber { get; set; }
 
         public string AddComment(string comment)
         {
