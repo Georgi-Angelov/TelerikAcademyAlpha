@@ -11,9 +11,29 @@ namespace Problem_2.Students_and_workers
         private string firstName;
         private string lastName;
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FirstName
+        {
+            get
+            {
+                return this.firstName;
+            }
+            set
+            {
+                this.firstName = value;
+            }
+        }
 
+        public string LastName
+        {
+            get
+            {
+                return this.lastName;
+            }
+            set
+            {
+                this.lastName = value;
+            }
+        }
         public Human(string firstName, string lastName)
         {
             this.firstName = firstName;

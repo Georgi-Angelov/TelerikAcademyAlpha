@@ -8,12 +8,18 @@ namespace Problem_2.Students_and_workers
 {
     public class Student : Human
     {
-        private int grade;
-
-
-        public Student(string firstName, string lastName, int grade) : base(firstName,lastName)
+        private double grade;
+        
+        public Student(string firstName, string lastName, double grade) : base(firstName,lastName) 
         {
             this.grade = grade;
+        }
+        public double Grade
+        {
+            get
+            {
+                return this.grade;
+            }
         }
     }
 }
