@@ -12,18 +12,17 @@ namespace Problem_1.Shape
         public static double[] widths = { 1.2, 2.0, 3.5, 4, 18, 3.6, 8.9, 10 };
         public static double[] heights = { 2.5, 3.4, 0.2, 0.1, 0.15, 18.5, 10, 11 };
         public const int numberOfShapes = 10;
-        public static Random rng = new Random();
         static void Main(string[] args)
         {
             Shape[] shapes = new Shape[numberOfShapes];
-
+            Random rng = new Random();
             for (int i = 0; i < numberOfShapes; i++)
             {
                 switch (rng.Next() % 3)
                 {
                     case 0:
-                        shapes[i] = new Triangle(widths[rng.Next(0, widths.Length)],
-                                                 heights[rng.Next(0, heights.Length)]);
+                        shapes[i] = new Triangle(widths[1],
+                                                 heights[1]);
                         break;
                     case 1:
                         shapes[i] = new Rectangle(widths[rng.Next(0, widths.Length)],

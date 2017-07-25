@@ -16,11 +16,11 @@ namespace Problem_1.Shape
 
         public Shape(double width)
         {
-            this.width = width;
+            this.Width = width;
         }
         public Shape(double width, double hight) : this(width)
         {
-            this.hight = hight;
+            this.Hight = hight;
         }
 
         public abstract double CalculateSurface();
