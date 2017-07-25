@@ -23,11 +23,11 @@ namespace Problem_1.Shape
                 {
                     case 0:
                         shapes[i] = new Triangle(widths[rng.Next(0, widths.Length)],
-                                                     heights[rng.Next(0, heights.Length)]);
+                                                 heights[rng.Next(0, heights.Length)]);
                         break;
                     case 1:
                         shapes[i] = new Rectangle(widths[rng.Next(0, widths.Length)],
-                                                 heights[rng.Next(0, heights.Length)]);
+                                                  heights[rng.Next(0, heights.Length)]);
                         break;
                     case 2:
                         shapes[i] = new Square(heights[rng.Next(0, heights.Length)]);
