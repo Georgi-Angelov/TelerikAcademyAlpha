@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Problem_2.Bank_Accounts
 {
-    class CustomerType
+    public enum CustomerType
     {
-    }
+        Individuals,
+        Companies
+    }   
 }

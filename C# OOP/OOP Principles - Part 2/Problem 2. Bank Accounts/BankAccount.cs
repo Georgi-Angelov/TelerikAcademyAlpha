@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Problem_2.Bank_Accounts
 {
-    public class BankAccount : IDepositable
+    public class BankAccount 
     {
         
         private Customer customer;
@@ -55,19 +55,17 @@ namespace Problem_2.Bank_Accounts
                 return (DateTime.Now.Year * 12 + DateTime.Now.Month) - (this.openDate.Year * 12 + this.openDate.Month);
             }
         }
-        public void MakeDeposit(decimal amount)
-        {
-            if (amount <= 0)
-            {
-                throw new ArgumentException("You cannot deposite a negative or a zero sum!");
-            }
-
-            this.Balance += amount;
-        }
 
         public virtual decimal CalculateInterestAmount()
         {
             return (this.NumberOfMonths * this.InterestRate);
+        }
+
+        
+
+        public override string ToString()
+        {
+            return $"{this.Customer.Name} {this.Balance} {this.InterestRate}";
         }
     }
 }
