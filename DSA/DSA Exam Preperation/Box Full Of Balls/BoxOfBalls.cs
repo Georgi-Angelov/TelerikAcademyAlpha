@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Box_Full_Of_Balls
@@ -7,25 +8,50 @@ namespace Box_Full_Of_Balls
     {
         static void Main(string[] args)
         {
-            var possibleMoves = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            var range = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            int wins = 0;
-            for (int i = range[0]; i <= range[1]; i++)
+            int[] possibleMoves = Console.ReadLine()
+                            .Split()
+                            .Select(int.Parse)
+                            .ToArray();
+
+            int[] range = Console.ReadLine()
+                            .Split()
+                            .Select(int.Parse)
+                            .ToArray();
+           
+            int rangeStart = range[0];
+            int rangeEnd = range[1];
+
+            bool[] isWins = new bool[rangeEnd + 1];
+            isWins[0] = false;
+
+            for (int i = 1; i <= rangeEnd; i++)
             {
                 foreach (var possibleMove in possibleMoves)
                 {
-                    if (possibleMove == i)
+                    if (possibleMove > i)
                     {
-                        wins++;
                         continue;
                     }
-                    else
+                    if (!isWins[i - possibleMove])
                     {
-                        
+                        isWins[i] = true;
                     }
                 }
             }
-            Console.WriteLine(wins);
+
+            int totalWins = 0;
+
+            for (int i = rangeStart; i <= rangeEnd; i++)
+            {
+                if (isWins[i])
+                {
+                    totalWins++;
+                }
+            }
+            
+            Console.WriteLine(totalWins);
         }
+
+        
     }
 }
