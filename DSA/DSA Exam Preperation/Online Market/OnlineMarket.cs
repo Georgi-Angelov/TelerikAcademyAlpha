@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Online_Market
 {
@@ -10,7 +8,7 @@ namespace Online_Market
     {
         static void Main(string[] args)
         {
-            Dictionary<string, Product> byName = new Dictionary<string, Product>();
+            Dictionary<decimal, Product> byPrice = new Dictionary<decimal, Product>();
             Dictionary<string, ICollection<Product>> byType = new Dictionary<string, ICollection<Product>>();
             StringBuilder output = new StringBuilder();
             string command;
@@ -21,13 +19,13 @@ namespace Online_Market
                 {
                     case "add":
                         Product productToAdd = new Product(commandParams[1], commandParams[2], int.Parse(commandParams[3]));
-                        if (byName.ContainsKey(productToAdd.Name))
+                        if (byPrice.ContainsKey(productToAdd.Price))
                         {
                             output.AppendLine("Error: Product " + productToAdd.Name + " already exists");
                             break;
                         }
 
-                        byName.Add(productToAdd.Name, productToAdd);
+                        byPrice.Add(productToAdd.Price, productToAdd);
 
                         if (!byType.ContainsKey(productToAdd.Type))
                         {
