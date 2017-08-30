@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNestedLoops", "NNestedLoops\NNestedLoops.csproj", "{AB2CD4D1-9A98-47E2-8BB5-D3765A99E6EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinationsWIthDuplicates", "CombinationsWIthDuplicates\CombinationsWIthDuplicates.csproj", "{7B64A2C1-CA6C-4BC8-A2D8-BA6146A33819}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AB2CD4D1-9A98-47E2-8BB5-D3765A99E6EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB2CD4D1-9A98-47E2-8BB5-D3765A99E6EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB2CD4D1-9A98-47E2-8BB5-D3765A99E6EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B64A2C1-CA6C-4BC8-A2D8-BA6146A33819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B64A2C1-CA6C-4BC8-A2D8-BA6146A33819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B64A2C1-CA6C-4BC8-A2D8-BA6146A33819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B64A2C1-CA6C-4BC8-A2D8-BA6146A33819}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
