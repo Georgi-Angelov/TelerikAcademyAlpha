@@ -8,23 +8,32 @@ namespace Documents
         {
             string input = Console.ReadLine();
             int left = 0;
+            if (input == null) return;
             int right = input.Length - 1;
             int result = 0;
             while (left < right)
             {
                 char a = input[left] <= 90 && input[left] >= 65 ? (char)(input[left] + 32) : input[left];
                 char b = input[right] <= 90 && input[right] >= 65 ? (char)(input[right] + 32) : input[right];
-                if (!char.IsLetter(a))
+                if (input[left] == '.'
+                    || input[left] == ','
+                    || input[left] == ' '
+                    || input[left] == '!'
+                    || input[left] == '?')
                 {
                     left++;
                     continue;
                 }
-                if (!char.IsLetter(b))
+                if (input[right] == '.'
+                    || input[right] == ','
+                    || input[right] == ' '
+                    || input[right] == '!'
+                    || input[right] == '?')
                 {
                     right--;
                     continue;
                 }
-                
+
                 if (input[left] == input[right])
                 {
                     left++;
@@ -32,8 +41,8 @@ namespace Documents
                     continue;
                 }
 
-                int first = (int)(a);
-                int second = (int)(b);
+                int first = a;
+                int second = b;
                 int difference = first - second > 0 ? first - second : -(first - second);
                 if (difference < 14)
                 {
@@ -50,7 +59,6 @@ namespace Documents
 
             }
             Console.WriteLine(result);
-            
         }
         
 
