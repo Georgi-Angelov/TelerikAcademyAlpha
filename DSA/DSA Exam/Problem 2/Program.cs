@@ -9,85 +9,39 @@ namespace Problem_2
 {
     static class Program
     {
+        private static List<int> parents = new List<int>(Enumerable.Repeat(int.MaxValue, 10));
         static void Main(string[] args)
         {
             int numberOfComparisons = int.Parse(Console.ReadLine());
-            List<Item> itemList = new List<Item>();
+            List<List<int>> parents = new List<List<int>>(10);
             
+            
+            for (int i = 0; i < 10; i++)
+            {
+                parents.Add(new List<int>());
+            }
             for (int i = 0; i < numberOfComparisons; i++)
             {
                 string[] inputParams = Console.ReadLine().Split().ToArray();
                 switch (inputParams[2])
                 {
                     case "before":
-                        
+                        parents[int.Parse(inputParams[0])].Add(int.Parse(inputParams[3]));
                         break;
                     case "after":
-
+                        parents[int.Parse(inputParams[3])].Add(int.Parse(inputParams[0]));
                         break;
                 }
             }
-            
-            List<int> sorted = unsorted.TSort(dependencies);
-        }
-
-        public static List<int> GraphDependencies(Item item)
-        {
+            //Console.WriteLine(string.Join(" ", parents.TopologicalSort()));
             
         }
-        public class Item
-        {
-            public int Number { get; }
-            public Item[] Dependencies { get; }
 
-            public Item(int number, params Item[] dependencies)
-            {
-                Number = number;
-                Dependencies = dependencies;
-            }
-        }
-        public static IList<T> TSort<T>(IEnumerable<T> source, Func<T, IEnumerable<T>> getDependencies)
-        {
-            var sorted = new List<T>();
-            var visited = new Dictionary<T, bool>();
-
-            foreach (var item in source)
-            {
-                Visit(item, getDependencies, sorted, visited);
-            }
-
-            return sorted;
-        }
-
-        public static void Visit<T>(T item, Func<T, IEnumerable<T>> getDependencies, List<T> sorted, Dictionary<T, bool> visited)
-        {
-            bool inProcess;
-            var alreadyVisited = visited.TryGetValue(item, out inProcess);
-
-            if (alreadyVisited)
-            {
-                if (inProcess)
-                {
-                    throw new ArgumentException("Cyclic dependency found.");
-                }
-            }
-            else
-            {
-                visited[item] = true;
-
-                var dependencies = getDependencies(item);
-                if (dependencies != null)
-                {
-                    foreach (var dependency in dependencies)
-                    {
-                        Visit(dependency, getDependencies, sorted, visited);
-                    }
-                }
-
-                visited[item] = false;
-                sorted.Add(item);
-            }
-        }
+        //public static List<int> TopologicalSort(this List<List<int>> parents,  )
+        //{
+            
+        //}
+        
     }
 }
 
