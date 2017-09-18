@@ -7,13 +7,10 @@ namespace KnapsackAlgo
 
     class KnapsackAlgorithm
     {
-
         private int[,] picks = new int[20, 20];
 
         static void Main(string[] args)
         {
-
-
             int capacity = int.Parse(Console.ReadLine());
             int itemsCount = int.Parse(Console.ReadLine());
             List<Food> foods = new List<Food>();

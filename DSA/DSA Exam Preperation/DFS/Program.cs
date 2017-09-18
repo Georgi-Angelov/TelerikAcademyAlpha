@@ -10,7 +10,7 @@
 
         public static void Main()
         {
-            graph = new Dictionary<string, List<string>>
+            var graph = new Dictionary<string, List<string>>
             {
                 {"sofiq", new List<string> {"burgas", "varna", "plovdiv", "kyustendil"} },
                 {"burgas", new List<string> {"varna", "vidin", "gabrovo"} },
@@ -28,7 +28,7 @@
 
 
             // DFS Recursive
-            var graph = new Graph(
+            var recursiveGraph = new Graph(
                 new[]
                 {
                     new[] { 3, 6 }, // successors of vertice 0
@@ -40,7 +40,7 @@
                     new[] { 0, 1, 4 } // successors of vertice 6
                 });
 
-            graph.DfsRecursive(0);
+            recursiveGraph.DfsRecursive(0);
 
         }
         /// <summary>
