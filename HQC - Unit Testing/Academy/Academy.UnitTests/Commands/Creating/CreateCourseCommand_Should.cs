@@ -28,7 +28,10 @@ namespace Academy.UnitTests.Core
             var lecturesPerWeek = "3";
             var startingDate = "2017/07/12";
 
-            var course = new Course(name, int.Parse(lecturesPerWeek), DateTime.Parse(startingDate), DateTime.Parse(startingDate).AddDays(30));
+            var course = new Course(name,
+                                    int.Parse(lecturesPerWeek),
+                                    DateTime.Parse(startingDate),
+                                    DateTime.Parse(startingDate).AddDays(15));
 
             var databaseSeasons = new List<ISeason>() { seasonMock.Object };
             var seasonCourses = new List<ICourse>();

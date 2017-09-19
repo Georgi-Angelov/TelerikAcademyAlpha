@@ -10,7 +10,7 @@ namespace Academy.UnitTests.Commands.Creating
     public class Constructor_Should
     {
         [TestMethod]
-        public void CreateCommand_WhenArgumentsAreValid()
+        public void CreateCourseCommand_WhenArgumentsAreValid()
         {
             //Arrange
             var factoryMock = new Mock<IAcademyFactory>();

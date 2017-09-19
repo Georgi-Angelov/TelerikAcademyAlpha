@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Academy.Models.Contracts;
+using Bytes2you.Validation;
 
 namespace Academy.Core.Providers
 {
@@ -20,6 +21,10 @@ namespace Academy.Core.Providers
 
         public Database()
         {
+            Guard.WhenArgument(seasons, "seasons").IsNotNull().Throw();
+            Guard.WhenArgument(students, "students").IsNotNull().Throw();
+            Guard.WhenArgument(trainers, "trainers").IsNotNull().Throw();
+            Guard.WhenArgument(logResult, "logResult").IsNotNull().Throw();
             this.seasons = new List<ISeason>();
             this.students = new List<IStudent>();
             this.trainers = new List<ITrainer>();

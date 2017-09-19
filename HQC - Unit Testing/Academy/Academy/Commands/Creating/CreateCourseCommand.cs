@@ -12,6 +12,8 @@ namespace Academy.Commands.Creating
 
         public CreateCourseCommand(IAcademyFactory factory, IDatabase database)
         {
+            Guard.WhenArgument(factory, "factory").IsNull().Throw();
+            Guard.WhenArgument(database, "database").IsNull().Throw();
             this.factory = factory;
             this.database = database;
         }
