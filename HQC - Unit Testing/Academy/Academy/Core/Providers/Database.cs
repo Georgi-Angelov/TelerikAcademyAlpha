@@ -25,6 +25,7 @@ namespace Academy.Core.Providers
             Guard.WhenArgument(students, "students").IsNotNull().Throw();
             Guard.WhenArgument(trainers, "trainers").IsNotNull().Throw();
             Guard.WhenArgument(logResult, "logResult").IsNotNull().Throw();
+
             this.seasons = new List<ISeason>();
             this.students = new List<IStudent>();
             this.trainers = new List<ITrainer>();

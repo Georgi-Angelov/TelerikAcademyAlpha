@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Commands\Creating\Constructor_Should.cs" />
     <Compile Include="Commands\Creating\CreateCourseCommand_Should.cs" />
+    <Compile Include="Commands\Creating\Execute_Should.cs" />
     <Compile Include="Core\Start_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

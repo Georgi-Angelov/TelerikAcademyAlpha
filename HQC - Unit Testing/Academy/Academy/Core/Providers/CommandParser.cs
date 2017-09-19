@@ -1,6 +1,7 @@
 ﻿using Academy.Commands.Contracts;
 using Academy.Core.Contracts;
 using Academy.Core.Factories;
+using Bytes2you.Validation;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,6 +12,7 @@ namespace Academy.Core.Providers
         private readonly ICommandFactory commandFactory;
         public CommandParser(ICommandFactory commandFactory)
         {
+            Guard.WhenArgument(commandFactory, "commandFactory").IsNull().Throw();
             this.commandFactory = commandFactory;
         }
 

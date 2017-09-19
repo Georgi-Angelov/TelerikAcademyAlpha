@@ -1,5 +1,6 @@
 ﻿using Academy.Commands.Contracts;
 using Academy.Core.Contracts;
+using Bytes2you.Validation;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Academy.Commands.Listing
 
         public ListUsersInSeasonCommand( IDatabase database)
         {
+            Guard.WhenArgument(database, "database").IsNull().Throw();
+
             this.database = database;
         }
 

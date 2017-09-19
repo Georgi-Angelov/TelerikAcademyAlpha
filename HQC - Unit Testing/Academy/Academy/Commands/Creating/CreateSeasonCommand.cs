@@ -1,5 +1,6 @@
 ﻿using Academy.Commands.Contracts;
 using Academy.Core.Contracts;
+using Bytes2you.Validation;
 using System.Collections.Generic;
 
 namespace Academy.Commands.Creating
@@ -11,6 +12,9 @@ namespace Academy.Commands.Creating
 
         public CreateSeasonCommand(IAcademyFactory factory, IDatabase database)
         {
+            Guard.WhenArgument(factory, "factory").IsNull().Throw();
+            Guard.WhenArgument(database, "database").IsNull().Throw();
+
             this.factory = factory;
             this.database = database;
         }

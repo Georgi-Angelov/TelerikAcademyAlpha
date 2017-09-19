@@ -14,6 +14,7 @@ namespace Academy.Commands.Creating
         {
             Guard.WhenArgument(factory, "factory").IsNull().Throw();
             Guard.WhenArgument(database, "database").IsNull().Throw();
+
             this.factory = factory;
             this.database = database;
         }

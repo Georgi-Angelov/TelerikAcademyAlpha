@@ -1,5 +1,6 @@
 ﻿using Academy.Commands.Contracts;
 using Academy.Core.Contracts;
+using Bytes2you.Validation;
 using System.Collections.Generic;
 
 namespace Academy.Commands.Listing
@@ -10,6 +11,8 @@ namespace Academy.Commands.Listing
 
         public ListCoursesInSeasonCommand(IDatabase database)
         {
+            Guard.WhenArgument(database, "database").IsNull().Throw();
+
             this.database = database;
         }
 
