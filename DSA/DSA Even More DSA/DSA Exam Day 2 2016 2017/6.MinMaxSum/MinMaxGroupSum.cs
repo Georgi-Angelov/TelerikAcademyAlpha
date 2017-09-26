@@ -1,58 +1,91 @@
 ﻿using System;
 using System.Linq;
 
-namespace _6.MinMaxSum
+namespace _MinMaxSum
 {
-    public class MinMaxGroupSum
+    class MinMaxSolution
     {
-        static void Main(string[] args)
+        //Unicorn-fucking-rainbow-cumming-black-magic
+        static bool IsValidSplit(int[] numbers, int m, int sum)
         {
-            int N = int.Parse(Console.ReadLine());
-
-            for (int i = 0; i < N; i++)
+            var current = 0;
+            var count = 1;
+            foreach (var number in numbers)
             {
-                var mAndG = Console.ReadLine()
-                                   .Split()
-                                   .Select(int.Parse)
-                                   .ToArray();
-                var sequenceCount = mAndG[0];
-                var groupsCount = mAndG[1];
+                current += number;
+                if (current > sum)
+                {
+                    current = number;
+
+                    count++;
+
+                    if (count > m)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+        //Modified MergeSort black magic
+        static int FindBestMinMaxSum(int[] numbers, int m, int l, int r)
+        {
+            while (l < r)
+            {
+                var mid = (l + r) / 2;
+                if (IsValidSplit(numbers, m, mid))
+                {
+                    r = mid;
+                }
+                else
+                {
+                    l = mid + 1;
+                }
+            }
+
+            return r;
+        }
+
+        public static void Solve()
+        {
+            var testsCount = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < testsCount; i++)
+            {
+                var nm = Console.ReadLine()
+                                .Split()
+                                .Select(int.Parse)
+                                .ToArray();
+
+                var m = nm[1];
 
                 var numbers = Console.ReadLine()
                                      .Split()
                                      .Select(int.Parse)
                                      .ToArray();
 
+                var maxNumber = int.MinValue;
+                var maxSum = 0;
 
+                foreach (var number in numbers)
+                {
+                    maxNumber = Math.Max(maxNumber, number);
+                    maxSum += number;
+                }
 
-
-                //Console.WriteLine(MinSum(numbers, n, k));
+                var best = FindBestMinMaxSum(numbers, m, maxNumber, maxSum);
+                Console.WriteLine(best);
             }
-
-
         }
-        ///Maximal sequence of size k
-        //private static int MinSum(int[] numbers, int n, int k)
-        //{
-        //    if (n < k)
-        //    {
-        //        return -1;
-        //    }
+
+        public static void Main()
+        {
+            //Console.SetIn(new StringReader(@"1
+            //5 2
+            //7 2 5 10 8"));
             
-        //    int res = 0;
-        //    for (int i = 0; i < k; i++)
-        //    {
-        //        res += numbers[i];
-        //    }
-
-        //    int curr_sum = res;
-        //    for (int i = k; i < n; i++)
-        //    {
-        //        curr_sum += numbers[i] - numbers[i - k];
-        //        res = Math.Max(res, curr_sum);
-        //    }
-
-        //    return res;
-        //}
+            Solve();
+        }
     }
 }
