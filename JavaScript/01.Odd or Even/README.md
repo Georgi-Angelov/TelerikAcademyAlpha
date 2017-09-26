@@ -1,71 +1,92 @@
-# Point, Circle, Rectangle
+# Odd or Even
 
 ## Description
-Implement a javascript function that accepts an array with a pair of coordinates **x** and **y** and uses an expression to checks for given point **(x, y)**
- if it is within the circle `K({1, 1}, 1.5)` and out of the rectangle `R(top=1, left=-1, width=6, height=2)`.
+Implement a javascript function that uses an expression to check if
+given integer is odd or even, and prints **"even NUMBER"** or **"odd NUMBER"**, where you should print the input number's value instead of **NUMBER**.
+
+- The functions should look like that:
+
+```js
+function solve(args) {
+    // your code goes here
+}
+```
 
 ## Input
-- You will receive the pair of coordinates as two elements of an array - the first element will be **x**, and the second - **y**.
+- You will receive the input as an array with only one element - the integer number as a javascript string.
 
 ## Output
-- Print **inside circle** if the point is inside the circle and **outside circle** if it's outside. Then print a single whitespace followed by
- **inside rectangle** if the point is inside the rectangle and **outside rectangle** otherwise. See the sample tests for a visual description.
- - You can use `console.log` to print the results or you can use `return` to return the answer. Both are correct.
- 
+- Output a single value - if the number is even, output **even**, followed by a space and the value of the number.
+  - Otherwise, print **odd**, again followed by a space and the number's value. See the sample tests.
+- You can use `console.log` to print the results or you can use `return` to return the answer. Both are correct.
+
 ## Constraints
-- The coordinates **x** and **y** will always be valid floating-point numbers in the range `[-1000, 1000]`.
-- Time limit: **0.1s**
+- The input number will always be a valid integer number.
+- The input number will always be in the range `[-30, 30]`.
+- Time limit: **0.2s**
 - Memory limit: **16MB**
 
 ## Sample tests
 
-### Sample test 1
+### Sample Test 1
 
 #### Input
 ```js
-['2.5', '2']
+['3']
 ```
 
 #### Output
 ```
-outside circle outside rectangle
+odd 3
 ```
 
-### Sample test 2
+### Sample Test 2
 
 #### Input
 ```js
-['0', '1']
+['2']
 ```
 
 #### Output
 ```
-inside circle inside rectangle
+even 2
 ```
 
-### Sample test 3
+### Sample Test 3
 
 #### Input
 ```js
-['2.5', '1']
+['-2']
 ```
 
 #### Output
 ```
-inside circle inside rectangle
+even -2
 ```
 
-### Sample test 4
+### Sample Test 4
 
 #### Input
 ```js
-['1', '2']
+['-1']
 ```
 
 #### Output
 ```
-inside circle outside rectangle
+odd -1
+```
+
+### Sample Test 5
+
+#### Input
+```js
+['0']
+```
+
+#### Output
+```
+even 0
 ```
 
 ## Submission
-- Submit your code [here](http://bgcoder.com/Contests/Compete/Index/357#8)
+- Submit your code [here](http://bgcoder.com/Contests/Compete/Index/357#0)
