@@ -5,7 +5,7 @@ function solve(args){
         return "true";
     }
     else{
-        return "false"+ " " + number;
+        return "false " + number;
     }
 }
 solve(['5']);
