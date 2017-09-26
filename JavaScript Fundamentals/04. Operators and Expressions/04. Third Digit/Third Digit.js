@@ -1,11 +1,11 @@
 function solve(args){
-    let number = parseInt(args[0]);
+    let number = parseInt((args[0] / 100) % 10);
 
-    if(parseInt((number / 100) % 10) === 7){
+    if(number === 7){
         return "true";
     }
     else{
-        return "false"+ " " + parseInt((number / 100) % 10);
+        return "false"+ " " + number;
     }
 }
 solve(['5']);
