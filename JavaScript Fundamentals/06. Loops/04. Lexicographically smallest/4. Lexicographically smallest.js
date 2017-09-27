@@ -1,14 +1,14 @@
 function solve(args) {
-  let first = args[0];
-  let second= args[1];
+    let first = args[0];
+    let second= args[1];
 
-  if (first>second) {
-      return '>';
-  }
-  else if (first<second) {
-      return '<';
-  }
-  else {
-      return '=';
-  }
+    if (first>second) {
+        return '>';
+    }
+    else if (first<second) {
+        return '<';
+    }
+    else {
+        return '=';
+    }
 }
